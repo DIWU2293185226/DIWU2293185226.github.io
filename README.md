@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## ACM暑期训练笔记
 
-ACM暑期训练笔记
+记录一些刷过的题和题解
 
 ### 刷过的一些DP
 
