@@ -1,8 +1,8 @@
 ## Welcome to GitHub Pages
 
-ACM暑期训练算法笔记
+ACM暑期训练笔记
 
-### Markdown
+### 刷过的一些DP
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
