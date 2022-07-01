@@ -110,9 +110,50 @@ public:
 };
 ```
 没什么特别的，正常dfs加回溯。
-### Jekyll Themes
+### 分治
+## 数组中的逆序对
+一道想了很久的痛苦分治。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DIWU2293185226/DIWU2293185226.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。
+0 <= 数组长度 <= 50000。
+
+思路：不断将数组二分，在归并排序的过程中，统计逆序数。
+
+拆分的终止条件：left>=right。
+
+这里用一个temp数组暂存左右子组。
+
+使用p,q两个指针分别指向左右子组的首元素。归并排序过程中，借助两指针的移动完成排序。
+排序并记录逆序对数的过程：
+    1.如果左指针越界：右子组当前元素排入nums中，并自增；
+    2.如果右指针越界：左子组当前元素排入nums中，并自增；
+    3.如果左子组当前元素小于等于右子组元素：左子组当前元素排入nums中，并自增;（2，3条件可合并）
+    4.如果左子组当前元素大于右子组元素：右子组当前元素排入nums中，并自增；ans（记录逆序数用）+=m-p+1；
+    （左右子组分别都已归并排序好，所以若左子组当前元素大于右子组当前元素，那么左子组后续所有元素均大于右子组当前元素）
+
+```markdown
+class Solution {
+public:
+    int reversePairs(vector<int>& nums) {
+    vector<int>temp(nums.size());
+    return fenzhi(nums,temp,0,nums.size()-1);
+    }
+    int fenzhi(vector<int>& nums,vector<int>& temp,int l,int r){
+    if(l>=r)return 0;//指针越界，终止
+    int m=(l+r)/2;//取得中间值
+    int ans=fenzhi(nums,temp,l,m)+fenzhi(nums,temp,m+1,r);//分割数组
+    for(int i=l;i<=r;i++)temp[i]=nums[i];//暂存元素
+    int p=l,q=m+1;//pq指针指向左右子组首元素
+    for(int i=l;i<=r;i++){
+        if(p==m+1)nums[i]=temp[q++];
+        else if(q==r+1||temp[p]<=temp[q])nums[i]=temp[p++];
+        else if(temp[q]<temp[p]){nums[i]=temp[q++];ans+=m-p+1;}
+    }
+    return ans;
+    }
+};
+```
+
 
 ### Support or Contact
 
