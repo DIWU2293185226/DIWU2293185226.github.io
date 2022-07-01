@@ -2,9 +2,39 @@
 
 记录一些刷过的题和题解
 
+### 处理技巧
+
+## 大数求余
+对于x^a，当a增大时，数值会呈指数级增长，超过int32甚至int64的范围之后会因为数值过大产生返回值错误。
+解决方案：循环求余、快速幂求余
+1.循环求余：
+已知求余运算性质：
+![image](https://user-images.githubusercontent.com/99236821/176842133-01a7f993-eff5-4f06-a1da-b05006c38f03.png)
+```markdown
+//p为一大数,比如可为1e9+7;
+long long remainder(int x,int a,int p){
+    long long rem=1;
+    for(int i=0;i<a;i++)rem=(rem*x)%p;
+    return rem;
+}
+```
+2.快速幂求余：
+![image](https://user-images.githubusercontent.com/99236821/176842308-2e955161-377b-434c-9f97-0c6661a7ba92.png)
+快速幂的时间复杂度相较循环求余更低一些。
+```markdown
+//p取值同上
+long long remainder(int a,int x,int p){
+    long long rem=1;
+    while(a>0){
+    if(a%2)rem=(rem*x) % p;
+    x=pow(x,2)%p;
+    a//=2;
+    }
+
+}
+```
 ### 刷过的一些DP
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 ```
