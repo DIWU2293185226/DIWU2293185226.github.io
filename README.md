@@ -7,21 +7,6 @@
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 ###dfs
@@ -34,7 +19,7 @@ Syntax highlighted code block
 ```markdown
 class Solution {
 public:
-    int numIslands(vector<vector<char>>& grid) {
+    int numIslands(vector<vector<char>> & grid) {
         int count=0;
         for(int i=0;i<grid.size();i++)
             for(int j=0;j<grid[i].size();j++)
@@ -44,7 +29,7 @@ public:
                 }
         return count;
     }
-    void bfs(vector<vector<char>>&grid,int i,int j){
+    void bfs(vector<vector<char>> &grid,int i,int j){
         if(i>=grid.size()||i<0||j>=grid[i].size()||j<0||grid[i][j]=='0')return;
         grid[i][j]='0';
         bfs(grid,i+1,j);
