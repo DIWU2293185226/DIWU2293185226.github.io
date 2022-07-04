@@ -4,6 +4,16 @@
 
 ### 处理技巧
 
+## 提高io效率的小技巧
+
+```markdown
+ios::sync_with_stdio(false);
+cin.tie(0);
+//sync_with_stdio函数是同时兼容scanf、printf与cin、cout的开关
+//兼容的同时造成了额外的开销
+//解绑操作如上
+```
+
 ## 大数求余
 对于x^a，当a增大时，数值会呈指数级增长，超过int32甚至int64的范围之后会因为数值过大产生返回值错误。
 解决方案：循环求余、快速幂求余
