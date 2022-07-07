@@ -61,7 +61,83 @@ long long remainder(int a,int x,int p){
 
 P3372线段树模板
 ```markdown
-
+#include<iostream>
+#define in for(int i=1;i<=n;i++)
+#define work for(int i=1;i<=m;i++)
+using namespace std;
+long long sum[1000001<<2],add[1000001<<2];
+int old[1000001],n,m,order;
+//建树 
+//更新父节点 
+void uppush(int st){sum[st]=sum[st<<1]+sum[st<<1|1];}
+void build(int l,int r,int st){
+	if(l==r){
+		sum[st]=old[l];
+		return;
+	}
+	int mid=(l+r)>>1;
+	build(l,mid,st<<1);
+	build(mid+1,r,st<<1|1);
+	uppush(st);
+}
+//st用于定位 
+//下推标记 
+void pushdown(int st,int ln,int rn){
+	if(add[st]){
+		//下推标记
+		add[st<<1]+=add[st];
+		add[st<<1|1]+=add[st];
+		//保持数据一致
+		sum[st<<1]+=add[st]*ln;
+		sum[st<<1|1]+=add[st]*rn;
+		//原标记标0
+		add[st]=0; 
+	}
+}
+//更新区间 
+void updata(int L,int R,int l,int r,int st,int value){
+	if(L<=l&&r<=R){
+		sum[st]+=value*(r-l+1);
+		add[st]+=value;
+		return;
+	}
+	int mid=(l+r)>>1;
+	pushdown(st,mid-l+1,r-mid);
+	if(L<=mid)updata(L,R,l,mid,st<<1,value);
+	if(mid<R)updata(L,R,mid+1,r,st<<1|1,value);
+	uppush(st);//更新本节点信息 
+}
+//查询区间 
+long long query(int L,int R,int l,int r,int st){
+	if(L<=l&&r<=R)return sum[st];
+	int mid=(l+r)>>1;
+	long long  ans=0;
+	pushdown(st,mid-l+1,r-mid);
+	if(L<=mid)ans+=query(L,R,l,mid,st<<1);
+	if(mid<R)ans+=query(L,R,mid+1,r,st<<1|1);
+	return ans;
+}
+int main(){
+	cin>>n>>m;
+	in cin>>old[i];
+	build(1,n,1);
+//	for(int i=0;i<n<<1;i++) cout<<sum[i]<<endl;
+	work{
+		int l,r,k;
+		long long ans=0;
+		cin>>order;
+		if(order==1){
+			cin>>l>>r>>k;
+			updata(l,r,1,n,1,k);
+		}
+		else{
+			cin>>l>>r;
+			ans=query(l,r,1,n,1);
+			cout<<ans<<endl;
+		}	
+	}
+	return 0;
+}
 ```
 
 ### 图
