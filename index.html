@@ -6,54 +6,364 @@
 -->
 
 <html>
-	<head>
-		<title>鶸正在搭建的个人博客...</title>
-		<!-- 规定编码规则 -->
-		<meta charset="utf-8" />
-		<meta name="referrer" content="no-referrer" /> 
-		<meta name="description" content="武某人的个人博客">
-		<meta name="keywords" content="html,css,javascript,博客">
-		<!-- 可令网页自适应手机屏幕大小 -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!-- 外部样式表 -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>鶸正在搭建的个人博客...</title>
+	<!-- 规定编码规则 -->
+	<meta charset="utf-8" />
+	<meta name="referrer" content="no-referrer" />
+	<meta name="description" content="武某人的个人博客">
+	<meta name="keywords" content="html,css,javascript,博客">
+	<!-- 可令网页自适应手机屏幕大小 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- 外部样式表 -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<span class="icon fa-gem"></span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>博客重构中...敬请期待</h1>
+					<p>目前主要更新暑期训练的算法笔记...更多内容后续补充...</p>
+					<!-- <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br /> -->
+					<!-- for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p> -->
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#intro">做题笔记</a></li>
+					<li><a href="#work">未知1哦</a></li>
+					<li><a href="#about">未知2呀</a></li>
+					<li><a href="#contact">访客登陆</a></li>
+					<!-- <li><a href="#elements">Elements</a></li> -->
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Intro -->
+			<article id="intro">
+				<h2 class="major">刷题目录</h2>
+				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+				<p>临时在这里记录一下笔记(部分整理)</p>
+				<p> <a href="#content1">C++一些奇淫巧计（竞赛用）</a>.</p>
+				<p><a href="#tulun"></a>图论</p>
+				<p><a href="#xdtree">线段树</a></p>
+				<p><a href="#other_acm">其他算法</a></p>
+			</article>
+
+			<!-- Work -->
+			<article id="work">
+				<h2 class="major">未知1</h2>
+				<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+				<p>无</p>
+				<p>摸鱼.JPG</p>
+			</article>
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">未知2</h2>
+				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<p>我该把文章放哪里好呢？</p>
+			</article>
+
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">Contact(没做后端，看看就好)</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
 						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>博客重构中...敬请期待</h1>
-								<p>目前主要更新暑期训练的算法笔记...更多内容后续补充...</p>
-								<!-- <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br /> -->
-								<!-- for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p> -->
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Reset" /></li>
+					</ul>
+				</form>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</article>
+
+			<!-- Elements -->
+			<article id="elements">
+				<h2 class="major">Elements</h2>
+
+				<section>
+					<h3 class="major">Text</h3>
+					<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is
+						<em>emphasized</em>.
+						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a
+							href="#">this is a link</a>.
+					</p>
+					<hr />
+					<h2>Heading Level 2</h2>
+					<h3>Heading Level 3</h3>
+					<h4>Heading Level 4</h4>
+					<h5>Heading Level 5</h5>
+					<h6>Heading Level 6</h6>
+					<hr />
+					<h4>Blockquote</h4>
+					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus
+						euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+						iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem
+						ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+					<h4>Preformatted</h4>
+					<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+				</section>
+
+				<section>
+					<h3 class="major">Lists</h3>
+
+					<h4>Unordered</h4>
+					<ul>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
+
+					<h4>Alternate</h4>
+					<ul class="alt">
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
+
+					<h4>Ordered</h4>
+					<ol>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis viverra.</li>
+						<li>Felis enim feugiat.</li>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis lorem.</li>
+						<li>Felis enim et feugiat.</li>
+					</ol>
+					<h4>Icons</h4>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+					<h4>Actions</h4>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="major">Table</h3>
+					<h4>Default</h4>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td> Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+					<h4>Alternate</h4>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td> Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</section>
+
+				<section>
+					<h3 class="major">Buttons</h3>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Primary</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button">Default</a></li>
+						<li><a href="#" class="button small">Small</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+					</ul>
+					<ul class="actions">
+						<li><span class="button primary disabled">Disabled</span></li>
+						<li><span class="button disabled">Disabled</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="major">Form</h3>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="demo-name">Name</label>
+								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+							</div>
+							<div class="field half">
+								<label for="demo-email">Email</label>
+								<input type="email" name="demo-email" id="demo-email" value=""
+									placeholder="jane@untitled.tld" />
+							</div>
+							<div class="field">
+								<label for="demo-category">Category</label>
+								<select name="demo-category" id="demo-category">
+									<option value="">-</option>
+									<option value="1">Manufacturing</option>
+									<option value="1">Shipping</option>
+									<option value="1">Administration</option>
+									<option value="1">Human Resources</option>
+								</select>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+								<label for="demo-priority-low">Low</label>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-high" name="demo-priority">
+								<label for="demo-priority-high">High</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-copy" name="demo-copy">
+								<label for="demo-copy">Email me a copy</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-human" name="demo-human" checked>
+								<label for="demo-human">Not a robot</label>
+							</div>
+							<div class="field">
+								<label for="demo-message">Message</label>
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
+									rows="6"></textarea>
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">做题笔记</a></li>
-								<li><a href="#work">未知1哦</a></li>
-								<li><a href="#about">未知2呀</a></li>
-								<li><a href="#contact">访客登陆</a></li>
-								<!-- <li><a href="#elements">Elements</a></li> -->
-							</ul>
-						</nav>
-					</header>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
+				</section>
 
-				<!-- Main -->
-					<div id="main">
-							<article id="content1">
-								<!-- <script src="assets/js/marked.js"></script> -->
-								<h2 class="major">奇淫巧计</h2>
-								<pre>
+			</article>
+<article id="content1">
+				<!-- <script src="assets/js/marked.js"></script> -->
+				<h2 class="major">奇淫巧计</h2>
+				<pre>
 									<h2>提高效率的io小技巧</h2>
 									<code>
 ios::sync_with_stdio(false);
@@ -69,342 +379,408 @@ cin.tie(0);
 #pragma GCC optimize(3,"Ofast","inline")
 									</code>
 								</pre>
-								<!-- <pre id="content"></pre> -->
-							</article>
-							<article id="other_acm">
-								<h2 class="major">
-									<pre>
+				<!-- <pre id="content"></pre> -->
+			</article>
+			<article id="other_acm">
+				<h2 class="major">其他算法</h2>
+				<pre>
 										<h2>快速幂</h2>
 										<p>
-对于x^a，当a增大时，数值会呈指数级增长，超过int32甚至int64的范围之后会因为数值过大产生返回值错误。
-解决方案：循环求余、快速幂求余
+对于x^a，当a增大时，数值会呈指数级增长，超过int32甚至int64的范围之后
+会因为数值过大产生返回值错误。解决方案：循环求余、快速幂求余
 1.循环求余：
 已知求余运算性质：
 <span class="image main"><img src="images/快速幂.png" alt="" /></span>
+<code>
+	//p为一大数,比如可为1e9+7;
+	long long remainder(int x,int a,int p){
+	long long rem=1;
+	for(int i=0;i < a;i++)rem=(rem*x)%p;
+	return rem;
+	}
+</code>
+2.快速幂求余：
+快速幂的时间复杂度相较循环求余更低一些。
+<code>
+	//p取值同上
+	long long remainder(int a,int x,int p){
+		long long rem=1;
+		while(a>0){
+		if(a%2)rem=(rem*x) % p;
+		x=pow(x,2)%p;
+		a//=2;
+		}
+	
+	}	
+</code>
 										</p>
-										<code>
-
-										</code>
 									</pre>
-								</h2>
-							</article>
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">刷题目录</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>临时在这里记录一下笔记(部分整理)</p>
-								<p> <a href="#content1">C++一些奇淫巧计（竞赛用）</a>.</p>
-								<p><a href="#tulun"></a>图论</p>
-								<p><a href="#xdtree">线段树</a></p>
-								<p><a href="other_acm">其他算法</a></p>
-							</article>
+			</article>
+			<article id="xdtree">
+				<h2 class="major">树</h2>
+				<h2>线段树</h2>
+				<pre>
+详细资料：https://www.cnblogs.com/AC-King/p/7789013.html
+线段树是一种二叉树，当然可以像一般的树那样写成结构体，指针什么的。
+但是它的优点是，它也可以用数组来实现树形结构，可以大大简化代码。
+数组形式适合在编程竞赛中使用，在已经知道线段树的最大规模的情况下，
+直接开足够空间的数组，然后在上面建立线段树。
+简单的记法： 足够的空间 = 数组大小n的四倍。
+实际上足够的空间 =  （n向上扩充到最近的2的某个次方）的两倍。
+举例子：假设数组长度为5，就需要5先扩充成8，8*2=16.线段树需要16个元素。
+如果数组元素为8，那么也需要16个元素。
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">未知1</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>无</p>
-								<p>摸鱼.JPG</p>
-							</article>
+线段树可递归实现也可非递归实现，优先非递归实现。
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">未知2</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>我该把文章放哪里好呢？</p>
-							</article>
+!!!!线段树的懒标记：
+线段树的区间修改也是将区间分成子区间，但是要加一个标记，称作懒惰标记。
+标记的含义：
+本节点的统计信息已经根据标记更新过了，但是本节点的子节点仍需要进行更新。
+即，如果要给一个区间的所有值都加上1，那么实际上并没有给这个区间的所有值都加上1
+而是打个标记，记下来，这个节点所包含的区间需要加1.
+打上标记后，要根据标记更新本节点的统计信息，
+比如，如果本节点维护的是区间和，而本节点包含5个数，
+那么打上+1的标记之后，要给本节点维护的和+5。这是向下延迟修改
+但是向上显示的信息是修改以后的信息，所以查询的时候可以得到正确的结果。
+有的标记之间会相互影响，所以比较简单的做法是
+每递归到一个区间，首先下推标记（若本节点有标记，就下推标记），
+然后再打上新的标记，这样仍然每个区间操作的复杂度是O(log2(n))。
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact(没做后端，看看就好)</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+标记有相对标记和绝对标记之分：
+相对标记是将区间的所有数+a之类的操作，标记之间可以共存
+跟打标记的顺序无关（跟顺序无关才是重点）。
+所以，可以在区间修改的时候不下推标记，留到查询的时候再下推。
+注意：如果区间修改时不下推标记，那么PushUp函数中，必须考虑本节点的标记。
+而如果所有操作都下推标记，那么PushUp函数可以不考虑本节点的标记
+因为本节点的标记一定已经被下推了（也就是对本节点无效了）
+绝对标记是将区间的所有数变成a之类的操作，打标记的顺序直接影响结果，
+所以这种标记在区间修改的时候必须下推旧标记，不然会出错。
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+注意，有多个标记的时候，标记下推的顺序也很重要，错误的下推顺序可能会导致错误。
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
+之所以要区分两种标记，是因为非递归线段树只能维护相对标记。
+因为非递归线段树是自底向上直接修改分成的每个子区间，
+所以根本做不到在区间修改的时候下推标记。
+非递归线段树一般不下推标记，而是自下而上求答案的过程中，根据标记更新答案。
+P3372线段树模板
+									<code>
+#include<iostream>
+#define in for(int i=1;i<=n;i++)
+#define work for(int i=1;i<=m;i++)
+using namespace std;
+long long sum[1000001<<2],add[1000001<<2];
+int old[1000001],n,m,order;
+//建树 
+//更新父节点 
+void uppush(int st){sum[st]=sum[st<<1]+sum[st<<1|1];}
+void build(int l,int r,int st){
+	if(l==r){
+		sum[st]=old[l];
+		return;
+	}
+	int mid=(l+r)>>1;
+	build(l,mid,st<<1);
+	build(mid+1,r,st<<1|1);
+	uppush(st);
 }
+//st用于定位 
+//下推标记 
+void pushdown(int st,int ln,int rn){
+	if(add[st]){
+		//下推标记
+		add[st<<1]+=add[st];
+		add[st<<1|1]+=add[st];
+		//保持数据一致
+		sum[st<<1]+=add[st]*ln;
+		sum[st<<1|1]+=add[st]*rn;
+		//原标记标0
+		add[st]=0; 
+	}
+}
+//更新区间 
+void updata(int L,int R,int l,int r,int st,int value){
+	if(L<=l&&r<=R){
+		sum[st]+=value*(r-l+1);
+		add[st]+=value;
+		return;
+	}
+	int mid=(l+r)>>1;
+	pushdown(st,mid-l+1,r-mid);
+	if(L<=mid)updata(L,R,l,mid,st<<1,value);
+	if(mid<R)updata(L,R,mid+1,r,st<<1|1,value);
+	uppush(st);//更新本节点信息 
+}
+//查询区间 
+long long query(int L,int R,int l,int r,int st){
+	if(L<=l&&r<=R)return sum[st];
+	int mid=(l+r)>>1;
+	long long  ans=0;
+	pushdown(st,mid-l+1,r-mid);
+	if(L<=mid)ans+=query(L,R,l,mid,st<<1);
+	if(mid<R)ans+=query(L,R,mid+1,r,st<<1|1);
+	return ans;
+}
+int main(){
+	cin>>n>>m;
+	in cin>>old[i];
+	build(1,n,1);
+//	for(int i=0;i<n<<1;i++) cout<<sum[i]<<endl;
+	work{
+		int l,r,k;
+		long long ans=0;
+		cin>>order;
+		if(order==1){
+			cin>>l>>r>>k;
+			updata(l,r,1,n,1,k);
+		}
+		else{
+			cin>>l>>r;
+			ans=query(l,r,1,n,1);
+			cout<< ans << endl;
+		}	
+	}
+	return 0;
+}
+									</code>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+								</pre>
 
-								<section>
-									<h3 class="major">Lists</h3>
+			</article>
+<article id="tulun">
+	<h2 class="major">图论</h2>
+	<h2>dijstra</h2>
+	<pre>
+迪杰斯特拉的三种优化
+<code>
+	//小根堆 
+	#include<vector>
+	#include<map>
+	#include<queue>
+	#include<algorithm>
+	#include<set>
+	#include<iostream>
+	#include<cstdio>
+	#include<list>
+	#include<string>
+	#include<cmath>
+	#include<cstring>
+	#include<stack>
+	using namespace std;
+	struct ha//小根堆
+	{
+		int x; 
+		int d;//节点编号 
+		bool operator < (const ha &a) const 
+		{
+			return x > a.x;
+		}
+	}; 
+	struct haha//小根堆
+	{
+		int x; 
+		int d;//节点编号
+	}; 
+	ha e;
+	haha ee;
+	int d[1000010];
+	priority_queue <ha> q;
+	int n, m, s, xx, yy, zz, i;
+	vector<haha> a[1000000];
+	int main()
+	{
+		scanf("%d%d%d",&n ,&m ,&s);
+		for(i = 1; i <= m; i++)
+		{
+			scanf("%d%d%d",&xx ,&yy ,&zz);
+			ee.d = yy;
+			ee.x = zz;
+			a[xx].push_back(ee);
+		}
+		for(i = 1; i <= n; i++) d[i] = 2000003647;
+		e.d = s;
+		e.x = 0; 
+		d[s] = 0;
+		q.push(e);//入队 
+		while (!q.empty())//队列非空 
+		{
+			e = q.top(); q.pop();//出队
+			int v = e.d;//取出节点编号
+			int d1 = e.x;
+			if (d[v] < d1) continue;//说明在这个点再此之后又入队了
+			//此次出队的并不是s到这个点的最短路，
+			//所以在这次更新前点v所连的点已经更过一次了 
+			//所以后面也不会进行松弛操作 
+			int len = a[v].size(); 
+			for(i = 0; i < len; i++)
+			{
+				haha g = a[v][i];
+				if ((d[v] + g.x < d[g.d]) || (d[g.d] == -233))//松弛操作 
+				{
+					d[g.d] = d[v] + g.x;
+					e.d = g.d;
+					e.x = d[g.d];
+					q.push(e);
+				}
+			}
+		}
+		for (i=1; i <= n; i++) //输出 
+		if (d[i] == 2000003647) cout << 2147483647 << " "; else cout << d[i] << " ";
+		return 0;
+	}
+	
+	//前向星存储 
+	/*
+	#include<cstdio>
+	#include<iostream>
+	#include<algorithm>
+	#include<queue>
+	using namespace std;
+	const int INF = 2147483647;
+	const int maxn = 10000 + 10;
+	const int maxm = 500000 + 10;
+	int n, m, s;
+	int fir[maxn], nxt[maxm], to[maxm], val[maxm], cnt;
+	void add_edge(int u, int v, int w) //前向星加边
+	{
+		nxt[++cnt] = fir[u];
+		fir[u] = cnt;
+		to[cnt] = v;
+		val[cnt] = w;
+	}
+	struct Node 
+	{
+		int d, id;
+		Node(){}
+		Node(int d, int id) : d(d), id(id){}
+		bool operator < (const Node& rhs) const
+		  {
+			return d > rhs.d;//重载 < 方便堆
+		  }
+	};
+	int dis[maxn], vis[maxn];
+	void Dijkstra(int s)
+	{
+		for(int i = 1; i <= n; i++) dis[i] = INF;
+		dis[s]=0;
+		priority_queue<Node> Q;
+		Q.push(Node(0,s));
+		while(!Q.empty()) 
+		  {
+			Node u = Q.top(); Q.pop();
+			if(vis[u.id]) continue;  //若某个点已经被更新到最优,就不用再次更新其他点
+			vis[u.id] = 1;
+			for(int e = fir[u.id]; e; e = nxt[e]) 
+			  {
+				int v = to[e], w = val[e];
+				if(u.d + w < dis[v]) 
+				  {
+					dis[v] = u.d + w;
+					Q.push(Node(dis[v],v));
+				  }
+			  }
+		  }
+	}
+	int main()
+	{
+		scanf("%d%d%d",&n ,&m ,&s);
+		for(int u, v, w, i=0; i < m; i++)
+		  {
+			scanf("%d%d%d",&u ,&v ,&w);
+			add_edge(u, v, w);
+		  }
+		Dijkstra(s);
+		for(int i = 1; i <= n; i++) printf("%d ", dis[i]);
+		return 0;
+	}
+	*/
+	
+	//pair存储 
+	/*
+	#include<iostream>
+	#include<cstdio>
+	#include<algorithm>
+	#include<utility>
+	#include<vector>
+	#include<queue>
+	#define MAXN 20000
+	#define INF 2147483647
+	using namespace std;
+	typedef pair<int,int> pii;
+	priority_queue<pii, vector<pii>, greater<pii> > pq;
+	struct edge
+	{
+		int to;
+		int cost;
+	};
+	vector<edge> G[MAXN];//g[i]--i to g[i].to cost cost
+	int n, m, s;
+	int dis[MAXN];
+	void dijk(int s)
+	{
+		for(int i = 1; i <= n; i++)
+			dis[i] = INF;
+		dis[s] = 0;
+		pq.push(make_pair(0,s));
+	   // cout<<dis[s]<<endl;
+		while(!pq.empty())
+		{
+			pii u = pq.top();
+			pq.pop();
+			int x = u.second; // bian hao
+			//cout<<x<<endl;
+			for(int i = 0; i < G[x].size(); i++)
+			{
+				edge e = G[x][i];
+				if(dis[e.to] > dis[x] + e.cost)
+				{
+					dis[e.to] = dis[x] + e.cost;
+					pq.push(make_pair(dis[e.to], e.to));
+				   // cout<<dis[e.to]<<endl;
+				}
+			}
+		}
+	}
+	int main()
+	{
+		cin >> n >> m >> s;
+		int from, to, cost;
+		edge in;
+		for(int i = 0; i < m; i++)
+		{
+			scanf("%d%d%d",&from ,&to ,&cost);
+			in.to = to; in.cost = cost;
+			G[from].push_back(in);
+		}
+	   // cout<<endl;
+		dijk(s);
+		for(int i = 1; i <= n; i++)
+			printf("%d ", dis[i]);
+		return 0;
+	}
+	*/
+	
+</code>
+	</pre>
+</article>
+		</div>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; 模板参考: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+	</div>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+	<!-- BG -->
+	<div id="bg"></div>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<!-- <script src="assets/js/content.js"></script> -->
+</body>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; 模板参考: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<!-- <script src="assets/js/content.js"></script> -->
-	</body>
 </html>
