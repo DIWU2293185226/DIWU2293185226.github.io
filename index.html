@@ -4,11 +4,13 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 	<head>
-		<title>鶸正在架构的博客...</title>
+		<title>鶸正在搭建的个人博客...</title>
 		<!-- 规定编码规则 -->
 		<meta charset="utf-8" />
+		<meta name="referrer" content="no-referrer" /> 
 		<meta name="description" content="武某人的个人博客">
 		<meta name="keywords" content="html,css,javascript,博客">
 		<!-- 可令网页自适应手机屏幕大小 -->
@@ -37,9 +39,9 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
+								<li><a href="#intro">做题笔记</a></li>
+								<li><a href="#work">未知1哦</a></li>
+								<li><a href="#about">未知2呀</a></li>
 								<li><a href="#contact">访客登陆</a></li>
 								<!-- <li><a href="#elements">Elements</a></li> -->
 							</ul>
@@ -48,18 +50,58 @@
 
 				<!-- Main -->
 					<div id="main">
+							<article id="content1">
+								<!-- <script src="assets/js/marked.js"></script> -->
+								<h2 class="major">奇淫巧计</h2>
+								<pre>
+									<h2>提高效率的io小技巧</h2>
+									<code>
+ios::sync_with_stdio(false);
+cin.tie(0);
+//sync_with_stdio函数是同时兼容scanf、printf与cin、cout的开关
+//兼容的同时造成了额外的开销
+//解绑操作如上
+									</code>
+									<h2>手动开优化</h2>
+									<code>
+#pragma GCC optimize(1)
+#pragma GCC optimize(2)
+#pragma GCC optimize(3,"Ofast","inline")
+									</code>
+								</pre>
+								<!-- <pre id="content"></pre> -->
+							</article>
+							<article id="other_acm">
+								<h2 class="major">
+									<pre>
+										<h2>快速幂</h2>
+										<p>
+对于x^a，当a增大时，数值会呈指数级增长，超过int32甚至int64的范围之后会因为数值过大产生返回值错误。
+解决方案：循环求余、快速幂求余
+1.循环求余：
+已知求余运算性质：
+<span class="image main"><img src="images/快速幂.png" alt="" /></span>
+										</p>
+										<code>
 
+										</code>
+									</pre>
+								</h2>
+							</article>
 						<!-- Intro -->
 							<article id="intro">
-								<h2 class="major">Intro</h2>
+								<h2 class="major">刷题目录</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>别瞅了，没什么东西。 <a href="#work">点这里跳转版面</a>.</p>
-								<p>这个版面拿来做什么呢...？</p>
+								<p>临时在这里记录一下笔记(部分整理)</p>
+								<p> <a href="#content1">C++一些奇淫巧计（竞赛用）</a>.</p>
+								<p><a href="#tulun"></a>图论</p>
+								<p><a href="#xdtree">线段树</a></p>
+								<p><a href="other_acm">其他算法</a></p>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
-								<h2 class="major">Work</h2>
+								<h2 class="major">未知1</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>无</p>
 								<p>摸鱼.JPG</p>
@@ -67,7 +109,7 @@
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">About</h2>
+								<h2 class="major">未知2</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>我该把文章放哪里好呢？</p>
 							</article>
@@ -363,6 +405,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<!-- <script src="assets/js/content.js"></script> -->
 	</body>
 </html>
