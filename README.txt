@@ -48,6 +48,135 @@ long long remainder(int a,int x,int p){
 
 }
 ```
+### Trie tree(字典树)
+Trie tree模板
+leetcode208实现字典树
+Trie（发音类似 "try"）或者说 前缀树 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例如自动补完和拼写检查。
+
+请你实现 Trie 类：
+
+Trie() 初始化前缀树对象。
+void insert(String word) 向前缀树中插入字符串 word 。
+boolean search(String word) 如果字符串 word 在前缀树中，返回 true（即，在检索之前已经插入）；否则，返回 false 。
+boolean startsWith(String prefix) 如果之前已经插入的字符串 word 的前缀之一为 prefix ，返回 true ；否则，返回 false 。
+ 
+
+示例：
+
+输入
+["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+输出
+[null, null, true, false, true, null, true]
+
+解释
+Trie trie = new Trie();
+trie.insert("apple");
+trie.search("apple");   // 返回 True
+trie.search("app");     // 返回 False
+trie.startsWith("app"); // 返回 True
+trie.insert("app");
+trie.search("app");     // 返回 True
+
+class Trie {
+private:
+    bool isend;
+    Trie*index[26];
+public:
+    Trie() {
+        isend=false;
+        memset(index,0,sizeof(index));
+    }
+    void insert(string word) {
+        Trie*cur=this;
+        for(char c:word){
+            if(cur->index[c-'a']==NULL){cur->index[c-'a']=new Trie();}
+            cur=cur->index[c-'a'];
+        }
+        cur->isend=true;
+    }
+    
+    bool search(string word) {
+        Trie* cur=this;
+        for(char c:word){
+            if(cur->index[c-'a']){
+                cur=cur->index[c-'a'];
+            }
+            else return false;
+        }
+        return cur->isend;
+    }
+    
+    bool startsWith(string prefix) {
+        Trie* cur=this;
+        for(char c:prefix){
+            if(cur->index[c-'a'])cur=cur->index[c-'a'];
+            else return false;
+        }
+        return true;
+    }
+};
+
+leetcode421最大亦或
+给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，其中 0 ≤ i ≤ j < n 。
+
+进阶：你可以在 O(n) 的时间解决这个问题吗？
+
+class Solution {
+private:
+struct node{
+    node* left=nullptr;//存0
+    node* right=nullptr;//存1
+    node(){};
+};
+node* root=new node();
+const int h=30;
+public:
+    void build(int num){
+        node* cur=root;
+        for(int i=h;i>=0;i--){
+            int key=(num>>i)&1;
+            if(!key){
+                if(!cur->left)cur->left=new node();
+                cur=cur->left;
+            }
+            else{
+                if(!cur->right)cur->right=new node();
+                cur=cur->right;
+            }
+        }
+    }
+    int search(int num){
+        node* cur=root;
+        int ans=0;
+        for(int i=h;i>=0;i--){
+            int key=(num >> i)&1;
+            if(key){
+                if(cur->left){cur=cur->left;ans=ans*2+1;}
+                else{
+                    cur=cur->right;
+                    ans*=2;
+                }
+            }
+            else{
+                if(cur->right){cur=cur->right;ans=ans*2+1;}
+                else {
+                    cur=cur->left;
+                    ans*=2;
+                }
+            }
+        }
+        return ans;
+    }
+    int findMaximumXOR(vector<int>& nums) {
+        int n=nums.size(),ans=0;
+        for(int i=1;i<n;i++){
+            build(nums[i-1]);
+            ans=max(ans,search(nums[i]));
+        }
+        return ans;
+    }
+};
 ### 线段树
 详细资料：https://www.cnblogs.com/AC-King/p/7789013.html
 线段树是一种二叉树，当然可以像一般的树那样写成结构体，指针什么的。
